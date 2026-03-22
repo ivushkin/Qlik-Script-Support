@@ -1,0 +1,20 @@
+<idea-plugin>
+    <id>local.qlik.script</id>
+    <name>Qlik Script Support</name>
+    <vendor email="local@example.com" url="https://example.local">local</vendor>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <fileType
+                name="Qlik Script"
+                language="QlikScript"
+                implementationClass="local.qlik.lang.QlikFileType"
+                extensions="qvs"/>
+
+        <lang.syntaxHighlighterFactory
+                language="QlikScript"
+                implementationClass="local.qlik.lang.QlikSyntaxHighlighterFactory"/>
+    </extensions>
+</idea-plugin>
+

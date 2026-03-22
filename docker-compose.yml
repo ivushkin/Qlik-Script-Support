@@ -1,0 +1,12 @@
+services:
+  qlik-idea-plugin-build:
+    image: gradle:8.7-jdk17
+    volumes:
+      - ./:/work
+      - gradle-cache:/home/gradle/.gradle
+    working_dir: /work
+    command: ["gradle", "--no-daemon", "--console=plain", "--info", "--stacktrace", "buildPlugin"]
+
+volumes:
+  gradle-cache: {}
+
